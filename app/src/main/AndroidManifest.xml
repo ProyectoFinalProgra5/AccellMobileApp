@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AccellMobileApp">
         <activity
-            android:name=".MainActivity"
+            android:name=".AddTourActivity"
+            android:exported="true" />
+        <activity
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
