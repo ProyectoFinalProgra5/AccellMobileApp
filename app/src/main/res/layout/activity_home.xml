@@ -24,6 +24,22 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:src="@drawable/ic_baseline_home_24"/>
+        <ImageView
+            android:id="@+id/WeatherBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="165dp"
+            android:src="@drawable/ic_baseline_beach_access_24" />
+
+        <ImageView
+            android:id="@+id/SalirBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="155dp"
+            android:src="@drawable/ic_baseline_login_24" />
+
     </LinearLayout>
 
     //Tittle layout

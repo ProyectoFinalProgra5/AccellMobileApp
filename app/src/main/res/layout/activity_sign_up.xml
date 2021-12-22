@@ -61,33 +61,7 @@
     </LinearLayout>
 
     //User name layout
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:padding="10dp">
 
-        <TextView
-            android:id="@+id/userNameLbl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Usuario"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:textColor="@color/black"
-            android:layout_marginRight="10dp"/>
-
-        <EditText
-            android:id="@+id/userNameTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="Nombre de usuario"
-            android:textSize="16dp" />
-    </LinearLayout>
 
     //Sign up email layout
     <LinearLayout
@@ -110,7 +84,7 @@
             android:layout_marginRight="10dp"/>
 
         <EditText
-            android:id="@+id/emailTxt"
+            android:id="@+id/SUemailTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Correo electrónico del usuario"
@@ -138,7 +112,7 @@
             android:layout_marginRight="10dp"/>
 
         <EditText
-            android:id="@+id/passwordTxt"
+            android:id="@+id/SUpasswordTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Ingrese su contraseña"
@@ -166,7 +140,7 @@
             android:layout_marginRight="10dp"/>
 
         <EditText
-            android:id="@+id/confirmPasswordTxt"
+            android:id="@+id/SUconfirmPasswordTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Ingrese su contrseña nuevamente"

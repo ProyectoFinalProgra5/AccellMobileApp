@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "387483026210",
+    "project_id": "accellmobileapp",
+    "storage_bucket": "accellmobileapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387483026210:android:28f3afc5d5280389ee1b7b",
+        "android_client_info": {
+          "package_name": "com.fvaldiviesok.accellmobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387483026210-rd5rae0gkp1msuqumujpuit293o3cnds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbVLv4JYHv052ZT8tHn-beNWFszpHk5vc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387483026210-rd5rae0gkp1msuqumujpuit293o3cnds.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

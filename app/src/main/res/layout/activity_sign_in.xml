@@ -84,8 +84,9 @@
             android:id="@+id/singInUserNameTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="text"
             android:hint="Nombre de usuario"
+            android:inputType="text"
+            android:minHeight="48dp"
             android:textSize="16dp" />
     </LinearLayout>
 
@@ -114,6 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Ingrese su contraseña"
+            android:minHeight="48dp"
             android:textSize="16dp" />
     </LinearLayout>
 
@@ -133,4 +135,21 @@
             android:text="Iniciar Sesión"
             android:backgroundTint="@color/primary_color"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="0.1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrarse"
+            android:backgroundTint="@color/primary_color"/>
+    </LinearLayout>
 </LinearLayout>
+
