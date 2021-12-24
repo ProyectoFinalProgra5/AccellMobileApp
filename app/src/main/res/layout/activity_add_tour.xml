@@ -6,177 +6,260 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AddTourActivity">
-
-    //Navigation bar layout
-    <LinearLayout
-        android:layout_weight="0.5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="start"
-        android:background="@color/primary_color">
-
-        <ImageView
-            android:id="@+id/addTourHomeBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_baseline_home_24"/>
-    </LinearLayout>
-
-    //Tittle layout
-    <LinearLayout
-        android:layout_weight="3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ACCELL"
-            android:textStyle="bold"
-            android:textSize="32dp"
-            android:textColor="@color/primary_color"/>
-    </LinearLayout>
-
-    ///Tour image Layout
-    <LinearLayout
-        android:layout_weight="4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center">
-
-        <ImageView
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ACCELL"
-            android:src="@mipmap/ic_launcher_round"/>
-    </LinearLayout>
+            android:layout_weight="5"
+            android:orientation="vertical">
 
-    //Tour name layout
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:padding="10dp">
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:background="@color/primary_color">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nombre"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:textColor="@color/black"
-            android:layout_marginRight="10dp"/>
+                <ImageView
+                    android:id="@+id/addTourHomeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_home_24"/>
+            </LinearLayout>
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Nombre del tour"
-            android:textSize="16dp" />
-    </LinearLayout>
+            //Tittle layout
+            <LinearLayout
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
 
-    //Tour description layout
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="ACCELL"
+                    android:textStyle="bold"
+                    android:textSize="32dp"
+                    android:textColor="@color/primary_color"/>
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Descripcion"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:textColor="@color/black"
-            android:layout_marginRight="10dp"/>
+            ///Tour image Layout
+            <LinearLayout
+                android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Descripcion del tour"
-            android:textSize="16dp" />
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="142dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/clouds"
+                    android:text="ACCELL" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="200dp">
+                <ListView
+                    android:id="@+id/listViewTours"
+                    android:nestedScrollingEnabled="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
-    //Tour contact phone layout
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:padding="10dp">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btnViewTours"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="117dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/primary_color"
+                    android:text="Ver Tours" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Telefono de contacto"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:textColor="@color/black"
-            android:layout_marginRight="10dp"/>
+            //Tour name layout
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp">
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Telefono de contcto del tour"
-            android:textSize="16dp" />
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"/>
 
-    //Tour contact email layout
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:padding="10dp">
+                <EditText
+                    android:id="@+id/tourID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre del tour"
+                    android:minHeight="48dp"
+                    android:textSize="16dp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email de contacto"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:textColor="@color/black"
-            android:layout_marginRight="10dp"/>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp">
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Email de contacto del tour"
-            android:textSize="16dp" />
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"/>
 
-    //Add tour layout
-    <LinearLayout
-        android:layout_weight="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center">
+                <EditText
+                    android:id="@+id/tourName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre del tour"
+                    android:minHeight="48dp"
+                    android:textSize="16dp" />
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/addTourBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Agregar tour"
-            android:backgroundTint="@color/primary_color"/>
-    </LinearLayout>
+            //Tour description layout
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descripcion"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/tourDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Descripcion del tour"
+                    android:minHeight="48dp"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            //Tour contact phone layout
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Telefono de contacto"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/tourPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Telefono de contcto del tour"
+                    android:minHeight="48dp"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            //Tour contact email layout
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Email de contacto"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:id="@+id/tourEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Email de contacto del tour"
+                    android:minHeight="48dp"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAgregarTour"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/primary_color"
+                android:text="Agregar Tour" />
+            <Button
+                android:id="@+id/btnEditarTour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Actualizar Tour"
+                android:backgroundTint="@color/primary_color"
+                />
+
+            <Button
+                android:id="@+id/btnEliminarTour"
+                android:layout_width="178dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/primary_color"
+                android:text="Elminar Tour" />
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>

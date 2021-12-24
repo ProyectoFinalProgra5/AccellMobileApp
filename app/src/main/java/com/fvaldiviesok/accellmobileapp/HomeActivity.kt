@@ -1,23 +1,28 @@
 package com.fvaldiviesok.accellmobileapp
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
+import android.view.View
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import com.fvaldiviesok.accellmobileapp.databinding.ActivityHomeBinding
+import com.fvaldiviesok.accellmobileapp.model.TourModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class HomeActivity : AppCompatActivity() {
+    private lateinit var listView: ListView
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityHomeBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
         binding = ActivityHomeBinding.inflate(layoutInflater)
         // Initialize Firebase Auth
         auth = Firebase.auth
@@ -44,8 +49,15 @@ class HomeActivity : AppCompatActivity() {
             signOut()
         }
 
+        val toursCerca = findViewById<ImageView>(R.id.searchTourBtn)
+
+        toursCerca.setOnClickListener{
+            val intent = Intent(this, AddTourActivity::class.java)
+            startActivity(intent)
+        }
+
         //Boton para navegar al activity de agregar tour
-        val addTourBtn = findViewById<Button>(R.id.goToAddTourBtn)
+        val addTourBtn = findViewById<Button>(R.id.AddTourBtn)
 
         addTourBtn.setOnClickListener {
             val intent = Intent(this, AddTourActivity::class.java)
@@ -74,5 +86,6 @@ class HomeActivity : AppCompatActivity() {
         val intent = Intent(this, SignInActivity::class.java)
         startActivity(intent)
     }
+    
 
 }

@@ -96,11 +96,12 @@
         android:gravity="center"
         android:background="@color/primary_color">
 
-        <EditText
+        <TextView
             android:id="@+id/searchTourTxt"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Search for a Tour" />
+            android:layout_height="26dp"
+            android:minHeight="48dp"
+            android:text="Search for a Tour" />
 
         <ImageView
             android:id="@+id/searchTourBtn"
@@ -109,6 +110,14 @@
             android:layout_gravity="center"
             android:src="@drawable/ic_baseline_search_24" />
     </LinearLayout>
+    <TextView
+        android:id="@+id/tourLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tours super chivas cerca tuyo"
+        android:layout_gravity="center"
+        android:textStyle="bold|italic"
+        android:gravity="top"/>
 
     //Tour list view layout
     <LinearLayout
@@ -120,20 +129,11 @@
         android:gravity="center"
         android:padding="10dp">
 
-        <TextView
-            android:id="@+id/tourLbl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tours populares cerca tuyo"
-            android:textStyle="bold|italic"
-            android:gravity="top"/>
-
-        <ListView
-            android:id="@+id/tourListView"
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:layout_marginTop="10dp"
-            android:nestedScrollingEnabled="true"/>
+            android:src="@drawable/sun"/>
+
     </LinearLayout>
 
     //Go to Add tour layout
@@ -146,10 +146,11 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/goToAddTourBtn"
+            android:id="@+id/AddTourBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ir a Agregar tour"
             android:backgroundTint="@color/primary_color"/>
     </LinearLayout>
+
 </LinearLayout>

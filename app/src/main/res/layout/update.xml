@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/teal_700"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/updateId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:ems="10"
+        android:hint="enter id"
+        android:textColorHint="@color/white"
+        android:textAlignment="center"
+
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/updateName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter new name"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/updateDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter new description"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/updatePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter new phone"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/updateEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter new email"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:minHeight="48dp" />
+</LinearLayout>
